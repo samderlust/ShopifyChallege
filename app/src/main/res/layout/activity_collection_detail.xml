@@ -9,25 +9,26 @@
 
     <TextView
             android:layout_width="0dp"
-            android:layout_height="41dp"
+            android:layout_height="38dp"
             android:id="@+id/detailCollectionName" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:textSize="24sp"
-            android:text="y"/>
+            android:text="y" android:layout_marginBottom="7dp" app:layout_constraintBottom_toTopOf="@+id/htmlText"
+            android:textStyle="bold" android:textColor="@android:color/background_dark"/>
     <ImageView
             android:layout_width="0dp"
             android:layout_height="71dp" app:srcCompat="@mipmap/ic_launcher"
-            android:id="@+id/detailCollectionImg" android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/detailCollectionName" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/detailCollectionImg" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/htmlText" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/detailProductList"
             android:background="@android:color/darker_gray" app:layout_constraintVertical_bias="0.058"/>
     <ListView
-            android:layout_width="399dp"
-            android:layout_height="549dp"
+            android:layout_width="0dp"
+            android:layout_height="467dp"
             android:id="@+id/detailProductList"
             android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -46,4 +47,14 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="@+id/detailCollectionName" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/htmlText" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/detailCollectionName"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="50dp"
+            app:layout_constraintHorizontal_bias="0.969" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/detailCollectionImg" android:textSize="18sp"
+            android:textAlignment="viewEnd"/>
 </android.support.constraint.ConstraintLayout>

@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             val collectionDetail = Intent(applicationContext, CollectionDetail::class.java)
 
             collectionDetail.putExtra("cTitle", shopCollection.custom_collections.get(position).title)
+            collectionDetail.putExtra("body_html", shopCollection.custom_collections.get(position).body_html)
             collectionDetail.putExtra("imgUrl", shopCollection.custom_collections.get(position).image.src)
             collectionDetail.putExtra("id", shopCollection.custom_collections.get(position).id.toString())
 
@@ -69,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 }
 
 class ShopCollection(val custom_collections: List<Collection>){}
-class Collection(val title: String, val id: Long, val image: Image){}
+class Collection(val title: String, val id: Long, val body_html: String, val image: Image){}
 class Image(val src: String){}
 
 

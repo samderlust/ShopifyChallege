@@ -25,11 +25,14 @@ class CollectionDetail : AppCompatActivity() {
 
         val title = intent.getStringExtra("cTitle")
         val imgUrl = intent.getStringExtra("imgUrl")
+        val body_html = intent.getStringExtra("body_html")
         id = intent.getStringExtra("id")
 
         DownloadImage(detailCollectionImg).execute(imgUrl)
 
         detailCollectionName.text = title
+        htmlText.text = body_html
+
         fetchProductList()
     }
 
